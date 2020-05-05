@@ -37,6 +37,7 @@ export class Nominatim {
     this.layer = new LayerVector({
       name: this.layerName,
       source: new SourceVector(),
+      zIndex: Infinity,
     });
 
     this.options = base.options;
