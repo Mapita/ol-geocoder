@@ -2,16 +2,16 @@
   "name": "ol-geocoder",
   "version": "4.0.0",
   "description": "A geocoder extension for OpenLayers.",
-  "author": "Jonatas Walker",
-  "homepage": "https://github.com/jonataswalker/ol-geocoder",
+  "author": "Timo Ruppell",
+  "homepage": "https://github.com/Mapita/ol-geocoder",
   "license": "MIT",
   "main": "dist/ol-geocoder.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jonataswalker/ol-geocoder.git"
+    "url": "git://github.com/Mapita/ol-geocoder.git"
   },
   "bugs": {
-    "url": "https://github.com/jonataswalker/ol-geocoder/issues"
+    "url": "https://github.com/Mapita/ol-geocoder/issues"
   },
   "files": [
     "dist/"
@@ -25,14 +25,14 @@
     "nominatim"
   ],
   "scripts": {
-    "dev": "run-s lint build:css rollup:dev",
-    "build": "run-s lint rollup build:css",
+    "dev": "lint build:css rollup:dev",
+    "build": "lint rollup build:css",
     "build:css": "node build/build-css",
     "rollup": "rollup -c build/config.js",
     "rollup:dev": "rollup -w -c build/config.js",
     "lint": "eslint build test src examples --cache",
-    "ci": "run-s build test:unit test:controls test:providers",
-    "test": "run-s build test:unit test:controls",
+    "ci": "run build test:unit test:controls test:providers",
+    "test": "run build test:unit test:controls",
     "test:controls": "testcafe chrome test/e2e/controls/*.test.js",
     "test:providers": "testcafe chrome test/e2e/providers/*.test.js",
     "test:unit": "jest",
